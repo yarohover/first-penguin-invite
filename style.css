@@ -270,3 +270,13 @@ td {
 .main .place > p > strong {
   font-size: 21px;
 }
+.main .place #map {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.main .place .place_link {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #1565c0 ;
+}
