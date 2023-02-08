@@ -29,3 +29,22 @@
     transform: scale(1.2);
   }
 }
+
+@keyframes warigari {
+  0% {
+    left: 30vw;
+  }
+  100% {
+    left: 33vw;
+  } 
+}
+
+@keyframes fade_close {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}

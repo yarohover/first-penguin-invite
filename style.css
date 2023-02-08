@@ -18,10 +18,12 @@ body {
   font-size: 34px;
   text-align: center;
   padding-top: 20px;
+  transition: all 0.5s;
 }
 .lego {
   font-size: 28px;
   text-align: center;
+  transform: scale(0);
 }
 
 /* ice */
@@ -48,6 +50,7 @@ body {
   background-size: contain;
   top: 42vh;
   left: 30vw;
+  transition: all 0.5s;
 }
 .penguin1 .text2{
   background-image: url(image/balloon.png);
@@ -59,15 +62,19 @@ body {
   font-size: 27px;
   top: -200px;
   left: 40px;
+  transition: all 0.5s;
+
 }
 .penguin1 .text2 .line1{
   display: block;
   margin-top: 50px;
+  transition: all 0.5s;
 }
 .penguin1 .text2 .line2{
   display: block;
   font-family: 'MaruBuriBold';
   font-size: 31px;
+  transition: all 0.5s;
 }
 /* penguin2 */
 .penguin2 {
@@ -78,6 +85,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   top: 42vh;
+  transition: all 0.5s;
 }
 .penguin2 .text1{
   background-image: url(image/balloon.png);
@@ -90,6 +98,7 @@ body {
   font-size: 27px;
   top: -150px;
   left: 10px;
+  transition: all 0.5s;
 }
 
 /* water */
@@ -117,10 +126,12 @@ body {
 .arrow {
   position: absolute;
   font-size: 51px;
-  top: 85vh;
+  top: 70vh;
+  color: #212121;
   text-align: center;
   width: 100%;
   animation: big-small 1s infinite ease-in-out 0s;
+  transition: all 0.5s;
 }
 
 /* gap */
@@ -139,7 +150,7 @@ body {
 
 /* main */
 .main {
-  height: 2000px;
+  /* height: 2000px; */
   position: relative;
   text-align: center;
 }
@@ -201,7 +212,7 @@ body {
   font-size: 18px;
 }
 .main .date > p > strong {
-  font-size: 21px;
+  font-size: 23px;
 }
 .main .date .calendar_wrap {
   margin-top: 30px;
@@ -268,7 +279,7 @@ td {
   font-size: 18px;
 }
 .main .place > p > strong {
-  font-size: 21px;
+  font-size: 23px;
 }
 .main .place #map {
   width: 200px;
@@ -279,4 +290,45 @@ td {
   margin-top: 10px;
   font-size: 18px;
   color: #1565c0 ;
+}
+
+/* footer */
+footer {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+footer > span {
+  font-size: 10px;
+  display: block;
+}
+
+/* js */
+.disapear {
+  transform: scale(0);
+  opacity: 0;
+}
+.warigari {
+  animation: warigari 0.5s ease-out infinite alternate;
+}
+.fade_close {
+  animation: fade_close 1s ease-in-out 0.5s 1;
+}
+.empty_scroll {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: -10px;
+  left: 0px;
+  overflow: scroll;
+  z-index: 100;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.empty_scroll::-webkit-scrollbar {
+  display: none;
+}
+.empty_scroll .empty_block {
+  height: 1000vh;
+  position: relative;
 }
