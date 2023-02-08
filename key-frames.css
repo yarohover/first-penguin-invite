@@ -1,0 +1,31 @@
+@keyframes around {
+  0% {
+    top: 70vh;
+    left: -5vw;
+  }
+  25% {
+    top: 72vh;
+    left: 0vw;
+  }
+  50% {
+    top: 74vh;
+    left: -5vw;
+  }
+  75% {
+    top: 72vh;
+    left: -10vw;
+  }
+  100% {
+    top: 70vh;
+    left: -5vw;
+  }
+}
+
+@keyframes big-small {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
