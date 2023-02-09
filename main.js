@@ -45,21 +45,21 @@ function timer(time){
 };
 
 async function start(){
-  await timer(3000);
+  await timer(1000);
   window.scrollTo(0,0);
   penguin2.classList.remove("disapear");
-  await timer(500);
+  await timer(300);
   text1.classList.remove("disapear");
-  await timer(800);
-  text2.classList.remove("disapear");
   await timer(500);
+  text2.classList.remove("disapear");
+  await timer(300);
   penguin1.classList.remove("warigari");
   t2line1.classList.remove("disapear");
-  await timer(1000);
-  t2line2.classList.remove("disapear");
-  await timer(1000);
-  title.classList.remove("disapear");
   await timer(500);
+  t2line2.classList.remove("disapear");
+  await timer(5000);
+  title.classList.remove("disapear");
+  await timer(300);
   lego.classList.remove("disapear");
   lego.classList.add("fade_close");
   await timer(2000);
@@ -74,21 +74,19 @@ async function start(){
 start();
 window.addEventListener('scroll', (e)=>{
   let winscry = window.scrollY;
-  console.log(winscry);
   if (winscry > 99 & started==true) {
     text1.classList.add('disapear');
     text2.classList.add('disapear');
     arrow.classList.add('disapear');
-    penguin1.style.transform = 'translateY('+ winscry*1.2 +'px) translateX(100px) rotate(180deg)';
+    penguin1.style.transform = 'translateY('+ winscry +'px) translateX(100px) rotate(180deg)';
   } else if(winscry < 99 & started==true){
     text1.classList.remove('disapear');
     text2.classList.remove('disapear');
     penguin1.style.transform = '';
   };
   if(winscry > height*0.4 + width*0.4){
-    penguin1.classList.add('disapear');
+    penguin1.classList.add('blur');
   } else {
-    penguin1.classList.remove('disapear');
-
+    penguin1.classList.remove('blur');
   }
 });

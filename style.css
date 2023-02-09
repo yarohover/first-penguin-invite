@@ -331,3 +331,6 @@ footer > span {
   position: relative;
 }
 
+.blur {
+  opacity: 0.3;
+}
