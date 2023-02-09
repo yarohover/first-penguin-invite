@@ -57,12 +57,12 @@ async function start(){
   t2line1.classList.remove("disapear");
   await timer(500);
   t2line2.classList.remove("disapear");
-  await timer(5000);
+  await timer(500);
   title.classList.remove("disapear");
   await timer(300);
   lego.classList.remove("disapear");
   lego.classList.add("fade_close");
-  await timer(2000);
+  await timer(500);
   arrow.classList.remove("disapear");
   scroll_prevent.classList.add("disapear");
   started = true;
@@ -88,5 +88,10 @@ window.addEventListener('scroll', (e)=>{
     penguin1.classList.add('blur');
   } else {
     penguin1.classList.remove('blur');
+  }
+  if(winscry > height*1 + width*1){
+    penguin1.classList.add('disapear');
+  } else {
+    penguin1.classList.remove('disapear');
   }
 });
