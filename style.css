@@ -63,7 +63,6 @@ body {
   top: -200px;
   left: 40px;
   transition: all 0.5s;
-
 }
 .penguin1 .text2 .line1{
   display: block;
@@ -130,7 +129,7 @@ body {
   color: #212121;
   text-align: center;
   width: 100%;
-  animation: big-small 1s infinite ease-in-out 0s;
+  animation: big-small 0.75s infinite ease-in-out alternate 0s;
   transition: all 0.5s;
 }
 

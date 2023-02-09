@@ -30,6 +30,7 @@ const penguin2 = document.querySelector(".penguin2");
 const text1 = document.querySelector(".text1");
 const arrow = document.querySelector(".arrow");
 const scroll_prevent = document.querySelector(".empty_scroll");
+let started = false;
 
 
 // functions
@@ -61,9 +62,24 @@ async function start(){
   await timer(2000);
   arrow.classList.remove("disapear");
   scroll_prevent.classList.add("disapear");
+  started = true;
 };
 
 
 
-
+// excute codes
 start();
+window.addEventListener('scroll', (e)=>{
+  let winscry = window.scrollY;
+  console.log(winscry);
+  if (winscry > 99 & started==true) {
+    text1.classList.add('disapear');
+    text2.classList.add('disapear');
+    arrow.classList.add('disapear');
+    penguin1.style.transform = 'translateY('+ winscry*0.5 +'px) translateX(100px) rotate(180deg)';
+  } else if(winscry < 99 & started==true){
+    text1.classList.remove('disapear');
+    text2.classList.remove('disapear');
+    penguin1.style.transform = '';
+  }
+});
