@@ -43,7 +43,8 @@ function timer(time){
 };
 
 async function start(){
-  await timer(1000);
+  await timer(3000);
+  window.scrollTo(0,0);
   penguin2.classList.remove("disapear");
   await timer(500);
   text1.classList.remove("disapear");
