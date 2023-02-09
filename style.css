@@ -52,7 +52,7 @@ body {
   background-size: contain;
   top: 42vh;
   left: 30vw;
-  transition: all 0.5s;
+  transition: all 0.25s;
 }
 .penguin1 .text2{
   background-image: url(image/balloon.png);

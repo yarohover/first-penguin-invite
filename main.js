@@ -31,6 +31,8 @@ const text1 = document.querySelector(".text1");
 const arrow = document.querySelector(".arrow");
 const scroll_prevent = document.querySelector(".empty_scroll");
 let started = false;
+const width = window.innerWidth;
+const height = window.innerHeight;
 
 
 // functions
@@ -77,10 +79,16 @@ window.addEventListener('scroll', (e)=>{
     text1.classList.add('disapear');
     text2.classList.add('disapear');
     arrow.classList.add('disapear');
-    penguin1.style.transform = 'translateY('+ winscry*0.5 +'px) translateX(100px) rotate(180deg)';
+    penguin1.style.transform = 'translateY('+ winscry*1.2 +'px) translateX(100px) rotate(180deg)';
   } else if(winscry < 99 & started==true){
     text1.classList.remove('disapear');
     text2.classList.remove('disapear');
     penguin1.style.transform = '';
+  };
+  if(winscry > height*0.4 + width*0.4){
+    penguin1.classList.add('disapear');
+  } else {
+    penguin1.classList.remove('disapear');
+
   }
 });
