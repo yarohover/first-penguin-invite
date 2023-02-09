@@ -279,8 +279,11 @@ td {
 .main .place > p > strong {
   font-size: 23px;
 }
-.main .place > p  a{
+.main .place > p > strong > a{
   color: #1565c0;
+}
+.main .place > p > strong > a > span {
+  font-size: 16px;
 }
 .main .place #map {
   width: 200px;
